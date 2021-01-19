@@ -22,8 +22,8 @@ set _tilde 0
 ###  Ubuntu Main Repository - Focal   ###
 #########################################
 
-deb [arch=amd64] http://us.archive.ubuntu.com/ubuntu/ focal main universe #restricted multiverse
-deb [arch=amd64] http://us.archive.ubuntu.com/ubuntu/ focal-updates main universe #restricted multiverse
+#deb [arch=amd64] http://us.archive.ubuntu.com/ubuntu/ focal main universe #restricted multiverse
+#deb [arch=amd64] http://us.archive.ubuntu.com/ubuntu/ focal-updates main universe #restricted multiverse
 #deb [arch=amd64] http://us.archive.ubuntu.com/ubuntu/ focal-proposed main universe #restricted multiverse
 #deb [arch=amd64] http://us.archive.ubuntu.com/ubuntu/ focal-backports main universe #restricted multiverse
 #deb [arch=amd64] http://us.archive.ubuntu.com/ubuntu/ focal-security main universe #restricted multiverse
