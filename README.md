@@ -11,9 +11,13 @@ sudo apt install apt-mirror
 Note: If Ubuntu greater than 18.04, you need to grab a patched apt-mirror from https://github.com/josbraden/apt-mirror
 
 mkdir -p /srv/mirror/{bin,etc}
+
 sudo chown -R $USER:USER /srv/mirror
+
 cp -a ~/v-offiline/apt-mirror/postmirror.sh /srv/mirror/bin/
+
 cp -a ~/v-offiline/apt-mirror/mirror.list /srv/mirror/etc
+
 sudo ln -sf /srv/mirror/etc/mirror.list /etc/apt/mirror.list
 
 ## 3) Starting with Trusty,Create a package listing then proceed to run:
@@ -25,6 +29,7 @@ apt list --installed 2>/dev/null|awk -F/ '!/^Listing/{print $1}'|tee ~/pkg.list.
 declare -ag PKGS=($(cat ~/pkg.list.$(lsb_release -cs).txt))
 
 for i in ${PKGS[@]};do apt-cache show ${i}|grep -m1 -E '^Filename:'|sed 's/^Filename: //g'; done|tee ~/pool.files.$(lsb_release -cs).txt
+
 
 ### Step through LTS upgrades
 sudo do-release-upgrade -f DistUpgradeViewNonInteractive
@@ -50,6 +55,7 @@ Note: The following assumes you copied the partial mirror files to /mirror on th
 Note: Currently all lines in /etc/apt/sources.list are commented out on sample appliance
 
 deb [arch=amd64] file:///mirror/ubuntu/ trusty main universe
+
 deb [arch=amd64] file:///mirror/ubuntu/ focal-updates main universe
 
 ### Edit /etc/update-manager/meta-release
