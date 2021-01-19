@@ -78,7 +78,7 @@ Note: Currently all lines in /etc/apt/sources.list are commented out on sample a
 
 ```
 deb [arch=amd64] file:///mirror/ubuntu/ trusty main universe
-deb [arch=amd64] file:///mirror/ubuntu/ focal-updates main universe
+deb [arch=amd64] file:///mirror/ubuntu/ trusty-updates main universe
 ```
 
 ### Edit /etc/update-manager/meta-release
