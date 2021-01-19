@@ -7,6 +7,7 @@ cd ~/ && git clone https://github.com/ThinGuy/v-offline.git
 
 ## 2) Install apt-mirror
 sudo apt install apt-mirror
+
 Note: If Ubuntu greater than 18.04, you need to grab a patched apt-mirror from https://github.com/josbraden/apt-mirror
 
 mkdir -p /srv/mirror/{bin,etc}
