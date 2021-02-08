@@ -82,6 +82,8 @@ URI = https://changelogs.ubuntu.com/meta-release to URI = file:///package-cache/
 
 URI_LTS = https://changelogs.ubuntu.com/meta-release-lts to URI_LTS = file:///package-cache/meta-release-lts
 ```
+## 5) Upgrade
+
 ### Run the upgrade
 Starting with Trusty, run:
 
