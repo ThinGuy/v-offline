@@ -87,7 +87,7 @@ Starting with Trusty, run:
 
 ```
 cp -a /etc/apt/sources{.list,.orig}
-  cat <<EOF|sudo tee 1>/dev/null /etc/apt/sources.list
+cat <<EOF|sudo tee 1>/dev/null /etc/apt/sources.list
   deb [arch=amd64] file:///package-cache/ trusty main universe
   deb [arch=amd64] file:///package-cache/ trusty-updates main universe
 EOF
