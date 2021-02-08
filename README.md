@@ -91,7 +91,7 @@ cat <<EOF|sudo tee 1>/dev/null /etc/apt/sources.list
   deb [arch=amd64] file:///package-cache/ trusty main universe
   deb [arch=amd64] file:///package-cache/ trusty-updates main universe
 EOF
-sudo sed -i 's|https://changelogs.ubuntu.com/|file:///package-cache/|g'
+sudo sed -i 's|https://changelogs.ubuntu.com/|file:///package-cache/|g' /etc/update-manager/meta-release
 sudo do-release-upgrade -f DistUpgradeViewNonInteractive 
 ```
 
