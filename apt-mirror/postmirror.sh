@@ -2,7 +2,7 @@
 export VERSA_DIR='/srv/mirror'
 export VERSA_ARCHIVES="${VERSA_DIR}/archives"
 export MIRROR_LIST='/etc/apt/mirror.list'
-export VERSA_LOCAL="http://ubuntu-archive.orangebox.me/"
+export VERSA_LOCAL="file:///package-cache/"
 declare -ag VERSA_DISTS=(trusty xenial bionic)
 
 printf "\nRunning Post mirror script...\n"
