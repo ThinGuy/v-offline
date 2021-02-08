@@ -19,9 +19,9 @@ sudo -E wget -qO ${VERSA_ARCHIVES}/us.archive.ubuntu.com/meta-release-lts https:
 
 #Replace original URL with URL of our local mirror
 printf "\nEditing ${VERSA_ARCHIVES}/us.archive.ubuntu.com/meta-release\n"
-sudo -E sed -i "s|http://.*com/|${VERSA_LOCAL}|g" ${VERSA_ARCHIVES}/us.archive.ubuntu.com/meta-release
+sudo -E sed -i "s|http://.*com/|${VERSA_LOCAL}|g;s/18.04.5/18.04.4/g" ${VERSA_ARCHIVES}/us.archive.ubuntu.com/meta-release
 printf "\nEditing ${VERSA_ARCHIVES}/us.archive.ubuntu.com/meta-release-lts\n"
-sudo -E sed -i "s|http://.*com/|${VERSA_LOCAL}|g" ${VERSA_ARCHIVES}/us.archive.ubuntu.com/meta-release-lts
+sudo -E sed -i "s|http://.*com/|${VERSA_LOCAL}|g;s/18.04.5/18.04.4/g" ${VERSA_ARCHIVES}/us.archive.ubuntu.com/meta-release-lts
 
 for DIST in ${VERSA_DISTS[@]};do
     export DIST
